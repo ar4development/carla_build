@@ -15,6 +15,7 @@ docker run \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
   --runtime=nvidia \
   --gpus all \
+  --cpus="10.0"
   --privileged \
   --network="host" \
   my_carla:dev

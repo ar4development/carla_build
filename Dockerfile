@@ -2,6 +2,7 @@ FROM nvidia/vulkan:1.1.121
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
 RUN apt update && apt install -y locales && locale-gen en_US en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && export LANG=en_US.UTF-8
 RUN apt install -y --no-install-recommends tzdata && apt install -y keyboard-configuration
 
@@ -60,7 +61,7 @@ RUN ./Setup.sh && ./GenerateProjectFiles.sh && make
 # Clone carla project
 WORKDIR /home/mavs
 RUN git clone https://github.com/carla-simulator/carla
-RUN cd carla && git checkout dev
+RUN cd carla && git checkout 0.9.13
 
 WORKDIR /home/mavs/carla
 RUN ./Update.sh
