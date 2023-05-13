@@ -61,7 +61,7 @@ RUN ./Setup.sh && ./GenerateProjectFiles.sh && make
 # Clone carla project
 WORKDIR /home/mavs
 RUN git clone https://github.com/carla-simulator/carla
-RUN cd carla && git checkout 0.9.13
+RUN cd carla && git checkout 0.9.14
 
 WORKDIR /home/mavs/carla
 RUN ./Update.sh
