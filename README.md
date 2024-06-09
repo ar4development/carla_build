@@ -1,3 +1,7 @@
+# About
+
+This repo contains docker file that builds UE4 dev environment for latest dev carla branch. 
+
 # Usage instruction:
 
 0. Make sure you have nvidia card and nvidia docker installed
@@ -14,7 +18,7 @@ docker run \
   --env="QT_X11_NO_MITSHM=1" \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
   --gpus all \
-  --cpus="10.0" \
+  --cpus="9.0" \
   --privileged \
   --network="host" \
   my_carla:dev
