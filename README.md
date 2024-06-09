@@ -9,7 +9,7 @@ This repo contains docker file that builds UE4 dev environment for latest dev ca
 2. [Generate keypair and deploy your public key to your github account](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) (when asked for private key passphrase, leave it blank).
 3. Name your private key file as `carla_keys` and place it right next to the Dockerfile
 4. Build Dockerfile with someting like `docker build -t my_carla:dev .` (this might take 1 to 3 hours depending on your hardware and ~250GB of free disk space)
-5. Run the image with GUI support like this (here I limit cpu usages to `10` cores to leave some processing power for host tasks):
+5. Run the image with GUI support like this (here I limit cpu usages to `9` cores to leave some processing power for host tasks):
 
 ```
 docker run \
